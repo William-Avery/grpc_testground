@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	"grpc/greet/greetpb"
 	"log"
-	"windows/PROJECTS/golang/api/greet/greetpb"
 
 	"google.golang.org/grpc"
 )
