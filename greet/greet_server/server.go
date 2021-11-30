@@ -14,7 +14,8 @@ type server struct{}
 
 func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.GreetResponse, error) {
 	firstName := req.GetGreeting().GetFirstName()
-	result := "Hello " + firstName
+	lastName := req.GetGreeting().GetLastName()
+	result := fmt.Sprintf("Hello %s %s", firstName, lastName)
 	res := &greetpb.GreetResponse{
 		Result: result,
 	}
